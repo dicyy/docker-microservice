@@ -1,0 +1,45 @@
+services:
+
+  db:
+    image: postgres:15
+    container_name: postgres
+    env_file:
+      - .env
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - appnet
+
+  minio:
+    image: minio/minio
+    container_name: minio
+    command: server /data --console-address ":9001"
+    env_file:
+      - .env
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    networks:
+      - appnet
+
+  backend:
+    build: ./backend
+    container_name: flask-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - minio
+    env_file:
+      - .env
+    networks:
+      - appnet
+
+volumes:
+  db_data:
+  minio_data:
+
+networks:
+  appnet:
