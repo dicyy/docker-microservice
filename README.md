@@ -16,7 +16,7 @@ cd project
 sudo docker compose up -d
 ```
 
-| Name | Age | Job |
+| Method | endpoint | Description |
 |-----|-----|-----|
-| Andi | 20 | Dev |
-| Budi | 21 | Hacker |
+| GET | /users | get user |
+| POST | /users | send user |
