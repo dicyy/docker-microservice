@@ -11,8 +11,8 @@ A project to comprehend about basic microservice automation and deployment. Lear
 
 ## Installation
 ```bash
-git clone https://github.com/dicyy/docker-microservice
-cd project
+git https://github.com/dicyy/docker-microservice.git
+cd docker-microservice
 sudo docker compose up -d
 ```
 
