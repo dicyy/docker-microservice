@@ -25,5 +25,4 @@ sudo docker compose up -d
 | DELETE | /users/index | delete user |
 
 ## Screenshot
-<img width="1920" height="1080" alt="Screenshot_2026-03-11_05_50_44" src="https://github.com/user-attachments/assets/df26f0e8-8bc4-4bd9-8eff-51c91dc66a09" />
-
+<img width="1536" height="821" alt="Screenshot_2026-03-23_04_01_30" src="https://github.com/user-attachments/assets/958b57c2-43c7-449b-b823-bcec1f83b21f" />
